@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Pets &amp; Products — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop &amp; Pets</a></li>
+        <li><a href="cart.html">Cart (2)</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+        <li><a href="admin-dashboard.html">Admin</a></li>
+        <li><a href="auth.html" class="btn-nav">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="shop-layout">
+    <!-- Filter Sidebar -->
+    <aside class="filter-sidebar">
+      <h3>Filter Catalog</h3>
+      <form action="#" method="get">
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label><input type="checkbox" name="cat" value="pets" checked> Pets (Dogs &amp; Cats)</label>
+          <label><input type="checkbox" name="cat" value="food" checked> Pet Food</label>
+          <label><input type="checkbox" name="cat" value="toys" checked> Toys</label>
+          <label><input type="checkbox" name="cat" value="accessories" checked> Accessories</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Availability</h4>
+          <label><input type="radio" name="avail" value="all" checked> All Items</label>
+          <label><input type="radio" name="avail" value="instock"> In Stock / Available</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Max Price (EGP)</h4>
+          <input type="range" name="max_price" min="100" max="10000" value="10000">
+        </div>
+
+        <button type="submit" class="btn-primary full-btn">Apply Filters</button>
+      </form>
+    </aside>
+
+    <!-- Main Product Grid -->
+    <section>
+      <form class="search-bar" action="#" method="get">
+        <input type="search" name="q" placeholder="Search for Golden Retriever, cat food, chew toys...">
+        <button type="submit" class="btn-primary">Search</button>
+      </form>
+
+      <div class="grid-cards">
+        <article class="card">
+          <img src="../images/golden-retriever3.jpg" alt="Golden Retriever Puppy" class="card-img">
+          <div class="card-body">
+            <span class="badge">Pet • Dog</span>
+            <h3>Max — Golden Retriever</h3>
+            <p>3 months old • Vaccinated • Friendly &amp; energetic.</p>
+            <div class="card-footer">
+              <span class="price">8,500 EGP</span>
+              <a href="details.html#max" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../images/scottish-fold.jpg" alt="Scottish Fold Kitten" class="card-img">
+          <div class="card-body">
+            <span class="badge">Pet • Cat</span>
+            <h3>Luna — Scottish Fold</h3>
+            <p>2 months old • Litter-trained • Purebred.</p>
+            <div class="card-footer">
+              <span class="price">6,000 EGP</span>
+              <a href="details.html#luna" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../images/dog-food.webp" alt="Puppy Growth Dry Kibble" class="card-img">
+          <div class="card-body">
+            <span class="badge">Food</span>
+            <h3>Puppy Growth Dry Kibble (4kg)</h3>
+            <p>Rich in chicken protein &amp; omega-3 fatty acids.</p>
+            <div class="card-footer">
+              <span class="price">1,150 EGP</span>
+              <a href="details.html#food" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../images/rope-toy.webp" alt="Cotton Rope Tug Toy" class="card-img">
+          <div class="card-body">
+            <span class="badge">Toys</span>
+            <h3>Cotton Rope Tug Toy</h3>
+            <p>Durable braided cotton for dental health and active play.</p>
+            <div class="card-footer">
+              <span class="price">220 EGP</span>
+              <a href="details.html#toy" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+         <img src="../images/leather-collar.jpg" alt="Adjustable Padded Collar" class="card-img">
+          <div class="card-body">
+            <span class="badge">Accessories</span>
+            <h3>Adjustable Padded Collar</h3>
+            <p>Soft inner lining with stainless steel D-ring clasp.</p>
+            <div class="card-footer">
+              <span class="price">340 EGP</span>
+              <a href="details.html#collar" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../images/cat-tree.webp" alt="Multi-Level Cat Tree" class="card-img">
+          <div class="card-body">
+            <span class="badge">Accessories</span>
+            <h3>Multi-Level Cat Tree</h3>
+            <p>Sisal scratching posts with elevated perch.</p>
+            <div class="card-footer">
+              <span class="price">1,450 EGP</span>
+              <a href="details.html#tree" class="btn-primary">Details</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store </p>
+  </footer>
+
+</body>
+</html>

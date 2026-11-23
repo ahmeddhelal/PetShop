@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop &amp; Pets</a></li>
+        <li><a href="cart.html">Cart (2)</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+        <li><a href="admin-dashboard.html">Admin</a></li>
+        <li><a href="auth.html" class="btn-nav">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="details-wrapper">
+    <p class="back-link-wrap"><a href="shop.html" class="back-link">&larr; Back to Shop</a></p>
+
+    <!-- 1. Max — Golden Retriever -->
+    <article id="max" class="details-grid item-detail">
+      <div>
+        <img src="../images/golden-retriever.jpg" alt="Max Golden Retriever Puppy" class="details-image">
+        <div class="thumb-row">
+          <img src="../images/golden-retriever4.jpg" alt="Max front view" class="thumb-img active">
+          <img src="../images/golden-retriever2.jpg" alt="Max playing" class="thumb-img">
+          <img src="../images/golden-retriever3.jpg" alt="Max vaccination card" class="thumb-img">
+        </div>
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">Available for Adoption</span>
+        <h1>Max — Golden Retriever</h1>
+        <p class="details-price">8,500 EGP</p>
+        <p class="details-desc">
+          Max is an affectionate, energetic 3-month-old Golden Retriever puppy raised in a home environment. He comes with an official vaccination booklet, deworming certificate, and starter kibble pack.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Pet — Dog</td>
+          </tr>
+          <tr>
+            <th>Breed</th>
+            <td>Golden Retriever</td>
+          </tr>
+          <tr>
+            <th>Age</th>
+            <td>3 Months</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <th>Health Status</th>
+            <td>Fully Vaccinated &amp; Vet Checked</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-max" class="qty-label">Qty:</label>
+          <input type="number" id="qty-max" name="quantity" value="1" min="1" max="1">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- 2. Luna — Scottish Fold -->
+    <article id="luna" class="details-grid item-detail">
+      <div>
+        <img src="../images/scottish-fold.jpg" alt="Luna Scottish Fold Kitten" class="details-image">
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">Available for Adoption</span>
+        <h1>Luna — Scottish Fold</h1>
+        <p class="details-price">6,000 EGP</p>
+        <p class="details-desc">
+          Luna is a calm, sweet-natured 2-month-old purebred Scottish Fold kitten. She is fully litter-trained, accustomed to indoor living, and comes with her complete vaccination record.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Pet — Cat</td>
+          </tr>
+          <tr>
+            <th>Breed</th>
+            <td>Scottish Fold</td>
+          </tr>
+          <tr>
+            <th>Age</th>
+            <td>2 Months</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Health Status</th>
+            <td>Vaccinated &amp; Litter Trained</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-luna" class="qty-label">Qty:</label>
+          <input type="number" id="qty-luna" name="quantity" value="1" min="1" max="1">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- 3. Puppy Growth Dry Kibble -->
+    <article id="food" class="details-grid item-detail">
+      <div>
+        <img src="../images/dog-food.webp" alt="Puppy Growth Dry Kibble" class="details-image">
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">In Stock (24 Bags Left)</span>
+        <h1>Puppy Growth Dry Kibble (4kg)</h1>
+        <p class="details-price">1,150 EGP</p>
+        <p class="details-desc">
+          Formulated specifically for growing puppies up to 12 months old. Packed with digestible chicken protein, calcium, and omega-3 fatty acids for healthy joints and a shiny coat.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Pet Food</td>
+          </tr>
+          <tr>
+            <th>Net Weight</th>
+            <td>4 kg</td>
+          </tr>
+          <tr>
+            <th>Main Ingredient</th>
+            <td>Dehydrated Chicken &amp; Brown Rice</td>
+          </tr>
+          <tr>
+            <th>Life Stage</th>
+            <td>Puppy (2–12 Months)</td>
+          </tr>
+          <tr>
+            <th>Storage</th>
+            <td>Resealable Fresh-Lock Bag</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-food" class="qty-label">Qty:</label>
+          <input type="number" id="qty-food" name="quantity" value="1" min="1" max="10">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- 4. Cotton Rope Tug Toy -->
+    <article id="toy" class="details-grid item-detail">
+      <div>
+        <img src="../images/rope-toy.webp" alt="Cotton Rope Tug Toy" class="details-image">
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">In Stock (40 Units Left)</span>
+        <h1>Cotton Rope Tug Toy</h1>
+        <p class="details-price">220 EGP</p>
+        <p class="details-desc">
+          Heavy-duty woven natural cotton rope designed for interactive tug-of-war sessions and solo chewing. Helps clean teeth and massage gums naturally.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Toys</td>
+          </tr>
+          <tr>
+            <th>Material</th>
+            <td>100% Natural Braided Cotton</td>
+          </tr>
+          <tr>
+            <th>Length</th>
+            <td>35 cm (Double-Knot)</td>
+          </tr>
+          <tr>
+            <th>Suitable For</th>
+            <td>Small &amp; Medium Dogs</td>
+          </tr>
+          <tr>
+            <th>Washable</th>
+            <td>Machine Washable</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-toy" class="qty-label">Qty:</label>
+          <input type="number" id="qty-toy" name="quantity" value="1" min="1" max="10">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- 5. Adjustable Padded Collar -->
+    <article id="collar" class="details-grid item-detail">
+      <div>
+        <img src="../images/leather-collar.jpg" alt="Adjustable Padded Collar" class="details-image">
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">In Stock (18 Units Left)</span>
+        <h1>Adjustable Padded Collar</h1>
+        <p class="details-price">340 EGP</p>
+        <p class="details-desc">
+          Durable outer strap paired with a soft neoprene padded interior to prevent chafing during daily walks. Features a rust-proof stainless steel D-ring for leash attachment.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Accessories</td>
+          </tr>
+          <tr>
+            <th>Material</th>
+            <td>Faux Leather &amp; Neoprene Padding</td>
+          </tr>
+          <tr>
+            <th>Neck Size</th>
+            <td>Adjustable (30 cm – 48 cm)</td>
+          </tr>
+          <tr>
+            <th>Hardware</th>
+            <td>Stainless Steel Buckle &amp; D-Ring</td>
+          </tr>
+          <tr>
+            <th>Color</th>
+            <td>Saddle Tan</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-collar" class="qty-label">Qty:</label>
+          <input type="number" id="qty-collar" name="quantity" value="1" min="1" max="10">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- 6. Multi-Level Cat Tree -->
+    <article id="tree" class="details-grid item-detail">
+      <div>
+        <img src="../images/cat-tree.jpg" alt="Multi-Level Cat Tree" class="details-image">
+      </div>
+
+      <div class="details-info">
+        <span class="status-available">In Stock (9 Units Left)</span>
+        <h1>Multi-Level Cat Tree</h1>
+        <p class="details-price">1,450 EGP</p>
+        <p class="details-desc">
+          A sturdy 3-tier activity tower featuring natural sisal-wrapped scratching posts, an enclosed plush condo for napping, and an elevated viewing perch with a dangling pom-pom toy.
+        </p>
+
+        <table class="specs-table">
+          <tr>
+            <th>Category</th>
+            <td>Accessories</td>
+          </tr>
+          <tr>
+            <th>Dimensions</th>
+            <td>50 cm &times; 40 cm &times; 115 cm</td>
+          </tr>
+          <tr>
+            <th>Post Material</th>
+            <td>Natural Sisal Rope</td>
+          </tr>
+          <tr>
+            <th>Cover Fabric</th>
+            <td>Soft Faux Fleece</td>
+          </tr>
+          <tr>
+            <th>Assembly</th>
+            <td>Tools &amp; Instructions Included</td>
+          </tr>
+        </table>
+
+        <form class="purchase-form" action="cart.html" method="get">
+          <label for="qty-tree" class="qty-label">Qty:</label>
+          <input type="number" id="qty-tree" name="quantity" value="1" min="1" max="5">
+          <button type="submit" class="btn-primary">Add to Shopping Cart</button>
+        </form>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store </p>
+  </footer>
+
+</body>
+</html>
