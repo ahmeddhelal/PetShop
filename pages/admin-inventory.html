@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Pets &amp; Products — PetShop Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <!-- Admin Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <a href="admin-dashboard.html" class="logo">Pet<span>Shop</span></a>
+      <span class="sidebar-tag">Admin Panel</span>
+
+      <nav>
+        <p class="sidebar-heading">Management</p>
+        <ul class="sidebar-links">
+          <li><a href="admin-dashboard.html">Dashboard</a></li>
+          <li><a href="admin-inventory.html" class="active">Pets &amp; Products</a></li>
+          <li><a href="admin-orders.html">Orders</a></li>
+          <li><a href="admin-customers.html">Customers</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <ul class="sidebar-links">
+          <li><a href="../index.html">View Store</a></li>
+          <li><a href="admin-login.html">Log Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1>Pets &amp; Products</h1>
+          <p>6 items in the catalog &bull; 2 pets, 4 products</p>
+        </div>
+        <a href="#item-form" class="btn-primary">+ Add New Item</a>
+      </header>
+
+      <div class="admin-content">
+
+        <!-- Inventory Table -->
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Inventory</h2>
+            <span class="panel-hint">Low stock = fewer than 20 units</span>
+          </div>
+
+          <form class="table-toolbar" action="#" method="get">
+            <input type="search" name="q" placeholder="Search by name or SKU..." aria-label="Search inventory">
+            <select name="category" aria-label="Filter by category">
+              <option value="">All Categories</option>
+              <option value="pet-dog">Pet — Dog</option>
+              <option value="pet-cat">Pet — Cat</option>
+              <option value="food">Food</option>
+              <option value="toys">Toys</option>
+              <option value="accessories">Accessories</option>
+            </select>
+            <button type="submit" class="btn-secondary">Filter</button>
+          </form>
+
+          <div class="table-scroll">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Availability</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/golden-retriever3.jpg" alt="" class="table-thumb">
+                      <span class="cell-strong">Max — Golden Retriever<span class="item-sku">PET-001</span></span>
+                    </div>
+                  </td>
+                  <td>Pet — Dog</td>
+                  <td>8,500 EGP</td>
+                  <td>1</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Max listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">Available</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/scottish-fold.jpg" alt="" class="table-thumb">
+                      <span class="cell-strong">Luna — Scottish Fold<span class="item-sku">PET-002</span></span>
+                    </div>
+                  </td>
+                  <td>Pet — Cat</td>
+                  <td>6,000 EGP</td>
+                  <td>1</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Luna listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">Available</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/dog-food.webp" alt="" class="table-thumb">
+                      <span class="cell-strong">Puppy Growth Dry Kibble (4kg)<span class="item-sku">FD-101</span></span>
+                    </div>
+                  </td>
+                  <td>Food</td>
+                  <td>1,150 EGP</td>
+                  <td>24</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Puppy Growth Dry Kibble listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">In Stock</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/rope-toy.webp" alt="" class="table-thumb">
+                      <span class="cell-strong">Cotton Rope Tug Toy<span class="item-sku">TY-201</span></span>
+                    </div>
+                  </td>
+                  <td>Toys</td>
+                  <td>220 EGP</td>
+                  <td>40</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Cotton Rope Tug Toy listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">In Stock</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/leather-collar.jpg" alt="" class="table-thumb">
+                      <span class="cell-strong">Adjustable Padded Collar<span class="item-sku">AC-301</span></span>
+                    </div>
+                  </td>
+                  <td>Accessories</td>
+                  <td>340 EGP</td>
+                  <td class="stock-low">18</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Adjustable Padded Collar listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">In Stock</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="item-cell">
+                      <img src="../images/cat-tree.webp" alt="" class="table-thumb">
+                      <span class="cell-strong">Multi-Level Cat Tree<span class="item-sku">AC-302</span></span>
+                    </div>
+                  </td>
+                  <td>Accessories</td>
+                  <td>1,450 EGP</td>
+                  <td class="stock-low">9</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" checked aria-label="Multi-Level Cat Tree listed on store">
+                      <span class="slider"></span>
+                      <span class="on-text">In Stock</span>
+                      <span class="off-text">Hidden</span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="#item-form" class="btn-sm btn-edit">Edit</a>
+                      <button type="button" class="btn-sm btn-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Add / Edit Pet or Product Form -->
+        <section class="panel" id="item-form">
+          <div class="panel-header">
+            <h2>Add / Edit Pet or Product</h2>
+            <span class="panel-hint"><span class="required">*</span> Required fields</span>
+          </div>
+
+          <div class="panel-body">
+            <!-- Phase 1 (front-end only): nothing is saved.
+                 In the backend phase this becomes method="post" enctype="multipart/form-data". -->
+            <form action="#" method="get">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="item-name">Name <span class="required">*</span></label>
+                  <input type="text" id="item-name" name="name" placeholder="e.g. Max — Golden Retriever"
+                         minlength="3" maxlength="80" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="item-category">Category <span class="required">*</span></label>
+                  <select id="item-category" name="category" required>
+                    <option value="" selected disabled>Select a category</option>
+                    <optgroup label="Pets">
+                      <option value="pet-dog">Pet — Dog</option>
+                      <option value="pet-cat">Pet — Cat</option>
+                    </optgroup>
+                    <optgroup label="Products">
+                      <option value="food">Food</option>
+                      <option value="toys">Toys</option>
+                      <option value="accessories">Accessories</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="item-price">Price (EGP) <span class="required">*</span></label>
+                  <input type="number" id="item-price" name="price" placeholder="e.g. 1150"
+                         min="1" step="1" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="item-stock">Stock Quantity <span class="required">*</span></label>
+                  <input type="number" id="item-stock" name="stock" placeholder="e.g. 24"
+                         min="0" step="1" required>
+                  <span class="field-hint">Use 1 for an individual pet.</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="item-availability">Availability <span class="required">*</span></label>
+                  <select id="item-availability" name="availability" required>
+                    <option value="available" selected>Available / In Stock</option>
+                    <option value="reserved">Reserved</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                    <option value="hidden">Hidden from Store</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="item-sku">SKU / Item Code</label>
+                  <input type="text" id="item-sku" name="sku" placeholder="e.g. FD-102"
+                         pattern="[A-Z]{2,3}-[0-9]{3}" title="2–3 capital letters, a dash, then 3 digits (e.g. FD-102)">
+                  <span class="field-hint">Format: AB-123</span>
+                </div>
+
+                <div class="form-field span-2">
+                  <label for="item-description">Description</label>
+                  <textarea id="item-description" name="description" maxlength="500"
+                            placeholder="Breed, age, health status, ingredients, materials, size..."></textarea>
+                </div>
+
+                <div class="form-field span-2">
+                  <label for="item-image">Product Image</label>
+                  <input type="file" id="item-image" name="image" accept="image/png, image/jpeg, image/webp">
+                  <span class="field-hint">JPG, PNG or WEBP. A square photo looks best.</span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Save Item</button>
+                <button type="reset" class="btn-secondary">Clear Form</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+
+      <footer>
+        <p>&copy; 2026 PetShop Online Store — Admin Panel</p>
+      </footer>
+    </main>
+
+  </div>
+
+</body>
+</html>

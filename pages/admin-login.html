@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <header class="admin-topbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <a href="../index.html" class="back-store">&larr; Back to Store</a>
+  </header>
+
+  <main class="login-wrapper">
+    <section class="login-card">
+      <span class="badge">Admin Panel</span>
+      <h1>Staff Sign In</h1>
+      <p class="login-subtitle">Log in to manage pets, products, orders, and customers.</p>
+
+      <!-- Phase 1 (front-end only): no real authentication.
+           Inputs have no "name" attribute so nothing is sent in the URL;
+           HTML5 validation runs, then the form opens the dashboard.
+           Backend phase: switch to method="post" over HTTPS, add name attributes,
+           and have the server hash the password (e.g. bcrypt) and compare it
+           to the stored hash. Never hash or check passwords in the browser. -->
+      <form action="admin-dashboard.html" method="get">
+        <div class="form-field">
+          <label for="admin-email">Email Address</label>
+          <input type="email" id="admin-email" placeholder="admin@petshop.com"
+                 autocomplete="username" required
+                 pattern="[^@\s]+@[^@\s]+\.com"
+                 title="Enter an email with an @ that ends in .com (e.g. admin@petshop.com)">
+          <span class="field-hint">Must contain @ and end in .com</span>
+        </div>
+
+        <div class="form-field">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" placeholder="Enter your password"
+                 autocomplete="current-password" minlength="8" required
+                 pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                 title="At least 8 characters, including one capital letter and one number">
+          <span class="field-hint">At least 8 characters, with 1 capital letter and 1 number.</span>
+        </div>
+
+        <div class="login-options">
+          <label><input type="checkbox"> Keep me signed in</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Sign In to Dashboard</button>
+      </form>
+
+      <p class="login-note">Not a staff member? <a href="auth.html">Customer login</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store </p>
+  </footer>
+
+</body>
+</html>

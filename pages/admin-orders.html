@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders — PetShop Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <!-- Admin Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <a href="admin-dashboard.html" class="logo">Pet<span>Shop</span></a>
+      <span class="sidebar-tag">Admin Panel</span>
+
+      <nav>
+        <p class="sidebar-heading">Management</p>
+        <ul class="sidebar-links">
+          <li><a href="admin-dashboard.html">Dashboard</a></li>
+          <li><a href="admin-inventory.html">Pets &amp; Products</a></li>
+          <li><a href="admin-orders.html" class="active">Orders</a></li>
+          <li><a href="admin-customers.html">Customers</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <ul class="sidebar-links">
+          <li><a href="../index.html">View Store</a></li>
+          <li><a href="admin-login.html">Log Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1>Customer Orders</h1>
+          <p>8 orders &bull; 3 active &bull; flat delivery fee of 50 EGP</p>
+        </div>
+      </header>
+
+      <div class="admin-content">
+
+        <section class="panel orders-panel">
+          <div class="panel-header">
+            <h2>All Orders</h2>
+            <span class="panel-hint">Change a status, then save</span>
+          </div>
+
+          <!-- Status filter: radio buttons + CSS :has(), no JavaScript -->
+          <div class="filter-chips" role="radiogroup" aria-label="Filter orders by status">
+            <input type="radio" name="show" id="show-all" checked>
+            <label for="show-all">All<span class="chip-count">8</span></label>
+
+            <input type="radio" name="show" id="show-pending">
+            <label for="show-pending">Pending<span class="chip-count">1</span></label>
+
+            <input type="radio" name="show" id="show-processing">
+            <label for="show-processing">Processing<span class="chip-count">1</span></label>
+
+            <input type="radio" name="show" id="show-shipped">
+            <label for="show-shipped">Shipped<span class="chip-count">1</span></label>
+
+            <input type="radio" name="show" id="show-delivered">
+            <label for="show-delivered">Delivered<span class="chip-count">4</span></label>
+
+            <input type="radio" name="show" id="show-cancelled">
+            <label for="show-cancelled">Cancelled<span class="chip-count">1</span></label>
+          </div>
+
+          <!-- Phase 1 (front-end only): status changes are not saved. -->
+          <form action="#" method="get">
+            <div class="table-scroll">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Customer</th>
+                    <th>Delivery Address</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row-pending">
+                    <td><span class="cell-strong">#ORD-2048</span><span class="cell-sub">20 Nov 2026</span></td>
+                    <td><span class="cell-strong">Mona Hassan</span><span class="cell-sub">010 2345 6781</span></td>
+                    <td class="cell-wrap">14 El-Nozha St, Heliopolis, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Max — Golden Retriever <span class="qty">&times;1</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">8,550 EGP</td>
+                    <td><span class="payment-tag">Cash on Delivery</span></td>
+                    <td>
+                      <select name="status-2048" class="status-select" aria-label="Status for order ORD-2048">
+                        <option value="pending" selected>Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-processing">
+                    <td><span class="cell-strong">#ORD-2047</span><span class="cell-sub">19 Nov 2026</span></td>
+                    <td><span class="cell-strong">Omar Khaled</span><span class="cell-sub">011 5678 1234</span></td>
+                    <td class="cell-wrap">7 Abbas El-Akkad St, Nasr City, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Puppy Growth Dry Kibble <span class="qty">&times;2</span></li>
+                        <li>Cotton Rope Tug Toy <span class="qty">&times;1</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">2,570 EGP</td>
+                    <td><span class="payment-tag">Credit Card</span></td>
+                    <td>
+                      <select name="status-2047" class="status-select" aria-label="Status for order ORD-2047">
+                        <option value="pending">Pending</option>
+                        <option value="processing" selected>Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-shipped">
+                    <td><span class="cell-strong">#ORD-2046</span><span class="cell-sub">18 Nov 2026</span></td>
+                    <td><span class="cell-strong">Nour Adel</span><span class="cell-sub">012 3456 7890</span></td>
+                    <td class="cell-wrap">22 Gameat El-Dewal St, Mohandessin, Giza</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Multi-Level Cat Tree <span class="qty">&times;1</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">1,500 EGP</td>
+                    <td><span class="payment-tag">Credit Card</span></td>
+                    <td>
+                      <select name="status-2046" class="status-select" aria-label="Status for order ORD-2046">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped" selected>Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-delivered">
+                    <td><span class="cell-strong">#ORD-2045</span><span class="cell-sub">16 Nov 2026</span></td>
+                    <td><span class="cell-strong">Youssef Tarek</span><span class="cell-sub">015 1122 3344</span></td>
+                    <td class="cell-wrap">5 Road 9, Maadi, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Adjustable Padded Collar <span class="qty">&times;2</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">730 EGP</td>
+                    <td><span class="payment-tag">Cash on Delivery</span></td>
+                    <td>
+                      <select name="status-2045" class="status-select" aria-label="Status for order ORD-2045">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered" selected>Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-delivered">
+                    <td><span class="cell-strong">#ORD-2044</span><span class="cell-sub">15 Nov 2026</span></td>
+                    <td><span class="cell-strong">Salma Ibrahim</span><span class="cell-sub">010 9988 7766</span></td>
+                    <td class="cell-wrap">31 Fouad St, Raml Station, Alexandria</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Puppy Growth Dry Kibble <span class="qty">&times;1</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">1,200 EGP</td>
+                    <td><span class="payment-tag">Credit Card</span></td>
+                    <td>
+                      <select name="status-2044" class="status-select" aria-label="Status for order ORD-2044">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered" selected>Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-cancelled">
+                    <td><span class="cell-strong">#ORD-2043</span><span class="cell-sub">13 Nov 2026</span></td>
+                    <td><span class="cell-strong">Karim Mostafa</span><span class="cell-sub">011 4433 2211</span></td>
+                    <td class="cell-wrap">9 El-Merghany St, Heliopolis, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Cotton Rope Tug Toy <span class="qty">&times;3</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">710 EGP</td>
+                    <td><span class="payment-tag">Cash on Delivery</span></td>
+                    <td>
+                      <select name="status-2043" class="status-select" aria-label="Status for order ORD-2043">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled" selected>Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-delivered">
+                    <td><span class="cell-strong">#ORD-2042</span><span class="cell-sub">10 Nov 2026</span></td>
+                    <td><span class="cell-strong">Hana Sherif</span><span class="cell-sub">012 7766 5544</span></td>
+                    <td class="cell-wrap">18 Mostafa El-Nahas St, Nasr City, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Adjustable Padded Collar <span class="qty">&times;1</span></li>
+                        <li>Cotton Rope Tug Toy <span class="qty">&times;1</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">610 EGP</td>
+                    <td><span class="payment-tag">Credit Card</span></td>
+                    <td>
+                      <select name="status-2042" class="status-select" aria-label="Status for order ORD-2042">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered" selected>Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr class="row-delivered">
+                    <td><span class="cell-strong">#ORD-2041</span><span class="cell-sub">8 Nov 2026</span></td>
+                    <td><span class="cell-strong">Mona Hassan</span><span class="cell-sub">010 2345 6781</span></td>
+                    <td class="cell-wrap">14 El-Nozha St, Heliopolis, Cairo</td>
+                    <td>
+                      <ul class="items-list">
+                        <li>Puppy Growth Dry Kibble <span class="qty">&times;1</span></li>
+                        <li>Cotton Rope Tug Toy <span class="qty">&times;2</span></li>
+                      </ul>
+                    </td>
+                    <td class="cell-strong">1,640 EGP</td>
+                    <td><span class="payment-tag">Cash on Delivery</span></td>
+                    <td>
+                      <select name="status-2041" class="status-select" aria-label="Status for order ORD-2041">
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered" selected>Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-footer">
+              <p>Totals include the 50 EGP delivery fee.</p>
+              <div class="row-actions">
+                <button type="reset" class="btn-secondary">Undo Changes</button>
+                <button type="submit" class="btn-primary">Save Status Changes</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+      </div>
+
+      <footer>
+        <p>&copy; 2026 PetShop Online Store — Admin Panel</p>
+      </footer>
+    </main>
+
+  </div>
+
+</body>
+</html>

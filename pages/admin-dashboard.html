@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <!-- Admin Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <a href="admin-dashboard.html" class="logo">Pet<span>Shop</span></a>
+      <span class="sidebar-tag">Admin Panel</span>
+
+      <nav>
+        <p class="sidebar-heading">Management</p>
+        <ul class="sidebar-links">
+          <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="admin-inventory.html">Pets &amp; Products</a></li>
+          <li><a href="admin-orders.html">Orders</a></li>
+          <li><a href="admin-customers.html">Customers</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <ul class="sidebar-links">
+          <li><a href="../index.html">View Store</a></li>
+          <li><a href="admin-login.html">Log Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1>Dashboard Overview</h1>
+          <p>Sunday, 22 November 2026</p>
+        </div>
+        <div class="admin-user">
+          <span class="admin-avatar">SA</span>
+          <span>Store Admin</span>
+        </div>
+      </header>
+
+      <div class="admin-content">
+
+        <!-- Summary Stat Cards -->
+        <section class="stats-grid" aria-label="Store summary">
+          <article class="stat-card pets">
+            <span class="stat-label">Total Pets</span>
+            <span class="stat-value">2</span>
+            <span class="stat-note">1 dog, 1 cat for adoption</span>
+          </article>
+
+          <article class="stat-card products">
+            <span class="stat-label">Products in Stock</span>
+            <span class="stat-value">91</span>
+            <span class="stat-note">Units across 4 products</span>
+          </article>
+
+          <article class="stat-card orders">
+            <span class="stat-label">Active Orders</span>
+            <span class="stat-value">3</span>
+            <span class="stat-note">1 pending, 1 processing, 1 shipped</span>
+          </article>
+
+          <article class="stat-card customers">
+            <span class="stat-label">Registered Customers</span>
+            <span class="stat-value">8</span>
+            <span class="stat-note">7 active, 1 suspended</span>
+          </article>
+        </section>
+
+        <div class="dashboard-grid">
+
+          <!-- Recent Orders -->
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Recent Orders</h2>
+              <a href="admin-orders.html">View All &rarr;</a>
+            </div>
+            <div class="table-scroll">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-strong">#ORD-2048</td>
+                    <td>Mona Hassan</td>
+                    <td>20 Nov 2026</td>
+                    <td>8,550 EGP</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">#ORD-2047</td>
+                    <td>Omar Khaled</td>
+                    <td>19 Nov 2026</td>
+                    <td>2,570 EGP</td>
+                    <td><span class="status-badge status-processing">Processing</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">#ORD-2046</td>
+                    <td>Nour Adel</td>
+                    <td>18 Nov 2026</td>
+                    <td>1,500 EGP</td>
+                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">#ORD-2045</td>
+                    <td>Youssef Tarek</td>
+                    <td>16 Nov 2026</td>
+                    <td>730 EGP</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">#ORD-2044</td>
+                    <td>Salma Ibrahim</td>
+                    <td>15 Nov 2026</td>
+                    <td>1,200 EGP</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Side Column -->
+          <div class="side-stack">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Low Stock Alerts</h2>
+                <a href="admin-inventory.html">Restock</a>
+              </div>
+              <div class="panel-body">
+                <ul class="stock-list">
+                  <li>
+                    <div>
+                      <span class="stock-name">Multi-Level Cat Tree</span>
+                      <span class="stock-category">Accessories</span>
+                    </div>
+                    <span class="stock-count">9 left</span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="stock-name">Adjustable Padded Collar</span>
+                      <span class="stock-category">Accessories</span>
+                    </div>
+                    <span class="stock-count warn">18 left</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Quick Actions</h2>
+              </div>
+              <div class="panel-body quick-actions">
+                <a href="admin-inventory.html#item-form" class="btn-primary">+ Add Pet or Product</a>
+                <a href="admin-orders.html" class="btn-secondary">Manage Orders</a>
+                <a href="admin-customers.html" class="btn-secondary">View Customers</a>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 PetShop Online Store — Admin Panel</p>
+      </footer>
+    </main>
+
+  </div>
+
+</body>
+</html>
