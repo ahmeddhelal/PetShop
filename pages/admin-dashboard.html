@@ -41,17 +41,14 @@
           <h1>Dashboard Overview</h1>
           <p>Sunday, 22 November 2026</p>
         </div>
-        <div class="admin-user">
-          <span class="admin-avatar">SA</span>
-          <span>Store Admin</span>
-        </div>
+        <span class="admin-user">Store Admin</span>
       </header>
 
       <div class="admin-content">
 
         <!-- Summary Stat Cards -->
         <section class="stats-grid" aria-label="Store summary">
-          <article class="stat-card pets">
+          <article class="stat-card">
             <span class="stat-label">Total Pets</span>
             <span class="stat-value">2</span>
             <span class="stat-note">1 dog, 1 cat for adoption</span>
@@ -76,106 +73,63 @@
           </article>
         </section>
 
-        <div class="dashboard-grid">
-
-          <!-- Recent Orders -->
-          <section class="panel">
-            <div class="panel-header">
-              <h2>Recent Orders</h2>
-              <a href="admin-orders.html">View All &rarr;</a>
-            </div>
-            <div class="table-scroll">
-              <table class="admin-table">
-                <thead>
-                  <tr>
-                    <th>Order ID</th>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Total</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="cell-strong">#ORD-2048</td>
-                    <td>Mona Hassan</td>
-                    <td>20 Nov 2026</td>
-                    <td>8,550 EGP</td>
-                    <td><span class="status-badge status-pending">Pending</span></td>
-                  </tr>
-                  <tr>
-                    <td class="cell-strong">#ORD-2047</td>
-                    <td>Omar Khaled</td>
-                    <td>19 Nov 2026</td>
-                    <td>2,570 EGP</td>
-                    <td><span class="status-badge status-processing">Processing</span></td>
-                  </tr>
-                  <tr>
-                    <td class="cell-strong">#ORD-2046</td>
-                    <td>Nour Adel</td>
-                    <td>18 Nov 2026</td>
-                    <td>1,500 EGP</td>
-                    <td><span class="status-badge status-shipped">Shipped</span></td>
-                  </tr>
-                  <tr>
-                    <td class="cell-strong">#ORD-2045</td>
-                    <td>Youssef Tarek</td>
-                    <td>16 Nov 2026</td>
-                    <td>730 EGP</td>
-                    <td><span class="status-badge status-delivered">Delivered</span></td>
-                  </tr>
-                  <tr>
-                    <td class="cell-strong">#ORD-2044</td>
-                    <td>Salma Ibrahim</td>
-                    <td>15 Nov 2026</td>
-                    <td>1,200 EGP</td>
-                    <td><span class="status-badge status-delivered">Delivered</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <!-- Side Column -->
-          <div class="side-stack">
-            <section class="panel">
-              <div class="panel-header">
-                <h2>Low Stock Alerts</h2>
-                <a href="admin-inventory.html">Restock</a>
-              </div>
-              <div class="panel-body">
-                <ul class="stock-list">
-                  <li>
-                    <div>
-                      <span class="stock-name">Multi-Level Cat Tree</span>
-                      <span class="stock-category">Accessories</span>
-                    </div>
-                    <span class="stock-count">9 left</span>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="stock-name">Adjustable Padded Collar</span>
-                      <span class="stock-category">Accessories</span>
-                    </div>
-                    <span class="stock-count warn">18 left</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="panel">
-              <div class="panel-header">
-                <h2>Quick Actions</h2>
-              </div>
-              <div class="panel-body quick-actions">
-                <a href="admin-inventory.html#item-form" class="btn-primary">+ Add Pet or Product</a>
-                <a href="admin-orders.html" class="btn-secondary">Manage Orders</a>
-                <a href="admin-customers.html" class="btn-secondary">View Customers</a>
-              </div>
-            </section>
+        <!-- Recent Orders -->
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Recent Orders</h2>
+            <a href="admin-orders.html">View All &rarr;</a>
           </div>
-
-        </div>
+          <div class="table-scroll">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">#ORD-2048</td>
+                  <td>Mona Hassan</td>
+                  <td>20 Nov 2026</td>
+                  <td>8,550 EGP</td>
+                  <td><span class="status-badge status-pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#ORD-2047</td>
+                  <td>Omar Khaled</td>
+                  <td>19 Nov 2026</td>
+                  <td>2,570 EGP</td>
+                  <td><span class="status-badge status-processing">Processing</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#ORD-2046</td>
+                  <td>Nour Adel</td>
+                  <td>18 Nov 2026</td>
+                  <td>1,500 EGP</td>
+                  <td><span class="status-badge status-shipped">Shipped</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#ORD-2045</td>
+                  <td>Youssef Tarek</td>
+                  <td>16 Nov 2026</td>
+                  <td>730 EGP</td>
+                  <td><span class="status-badge status-delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">#ORD-2044</td>
+                  <td>Salma Ibrahim</td>
+                  <td>15 Nov 2026</td>
+                  <td>1,200 EGP</td>
+                  <td><span class="status-badge status-delivered">Delivered</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
 
       <footer>
