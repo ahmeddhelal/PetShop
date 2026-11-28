@@ -26,7 +26,7 @@
   <main class="auth-page">
     <div class="auth-heading">
       <h1>Welcome to PetShop</h1>
-      <p>Sign in to your account or create one to get started.</p>
+      <p>Sign in to your account or create one to get started. Demo only: submitting either form creates a temporary session in this browser tab; credentials are not verified.</p>
     </div>
 
     <div class="auth-layout">
@@ -62,7 +62,7 @@
             <label for="register-phone">Phone Number</label>
             <input id="register-phone" name="phone" type="tel" autocomplete="tel"
                    placeholder="e.g. +20 100 123 4567" minlength="8" maxlength="20"
-                   pattern="[0-9+() -]{8,20}"
+                   pattern="(?:[0-9+ \x2D]|\(|\)){8,20}"
                    title="Enter 8 to 20 characters using digits, spaces, +, parentheses, or hyphens."
                    required>
           </div>
@@ -87,6 +87,19 @@
   <footer>
     <p>&copy; 2026 PetShop Online Store</p>
   </footer>
+
+  <script>
+    const returnPage = new URLSearchParams(window.location.search).get("return");
+    const redirectAfterLogin = returnPage === "cart.html" ? returnPage : "../index.html";
+
+    document.querySelectorAll(".auth-form").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        sessionStorage.setItem("petshopLoggedIn", "true");
+        window.location.href = redirectAfterLogin;
+      });
+    });
+  </script>
 
 </body>
 </html>

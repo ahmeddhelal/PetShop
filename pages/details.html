@@ -306,5 +306,18 @@
     <p>&copy; 2026 PetShop Online Store </p>
   </footer>
 
+  <script>
+    document.querySelectorAll(".purchase-form").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        if (sessionStorage.getItem("petshopLoggedIn") === "true") {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.href = "auth.html?return=cart.html";
+      });
+    });
+  </script>
+
 </body>
 </html>

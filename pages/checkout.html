@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="shop.html">Shop &amp; Pets</a></li>
+        <li><a href="cart.html">Cart (2)</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+        <li><a href="admin-login.html">Admin</a></li>
+        <li><a href="auth.html" class="btn-nav">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <div class="checkout-heading">
+      <h1>Checkout</h1>
+      <a href="cart.html" class="back-to-cart">&larr; Back to cart</a>
+    </div>
+
+    <div class="checkout-layout">
+      <section class="checkout-card" aria-labelledby="shipping-heading">
+        <h2 id="shipping-heading">Shipping &amp; Payment</h2>
+        <form class="checkout-form" action="#" method="post">
+          <div class="form-field">
+            <label for="full-name">Full Name</label>
+            <input id="full-name" name="full_name" type="text" autocomplete="name"
+                   placeholder="e.g. Alex Morgan" minlength="2" maxlength="60"
+                   pattern="[\p{L}][\p{L}\p{M} .'-]{1,59}"
+                   title="Enter a name using letters, spaces, apostrophes, periods, or hyphens."
+                   required>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel"
+                   placeholder="e.g. +20 100 123 4567" minlength="8" maxlength="20"
+                   pattern="[0-9+() -]{8,20}"
+                   title="Enter 8 to 20 characters using digits, spaces, +, parentheses, or hyphens."
+                   required>
+          </div>
+
+          <div class="form-field">
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" autocomplete="street-address"
+                      placeholder="Street, building, apartment, and any delivery notes"
+                      minlength="10" maxlength="250" required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="city">City / Zone</label>
+            <select id="city" name="city_zone" autocomplete="address-level2" required>
+              <option value="" selected disabled>Select your city or zone</option>
+              <option value="cairo">Cairo</option>
+              <option value="giza">Giza</option>
+              <option value="alexandria">Alexandria</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <fieldset class="payment-options">
+            <legend>Payment Method</legend>
+            <label class="payment-choice">
+              <input type="radio" name="payment_method" value="cash_on_delivery" required checked>
+              <span>Cash on Delivery</span>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payment_method" value="card" required>
+              <span>Card</span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn-primary place-order-button">Place Order</button>
+        </form>
+      </section>
+
+      <aside class="checkout-summary" aria-labelledby="checkout-summary-heading">
+        <h2 id="checkout-summary-heading">Order Summary</h2>
+        <div class="checkout-item">
+          <span>Puppy Growth Dry Kibble (4kg) × 1</span>
+          <span>1,150 EGP</span>
+        </div>
+        <div class="checkout-item">
+          <span>Multi-Level Cat Tree × 2</span>
+          <span>2,900 EGP</span>
+        </div>
+        <dl class="checkout-totals">
+          <div>
+            <dt>Subtotal</dt>
+            <dd>4,050 EGP</dd>
+          </div>
+          <div>
+            <dt>Delivery Fee</dt>
+            <dd>150 EGP</dd>
+          </div>
+          <div class="checkout-total">
+            <dt>Total Price</dt>
+            <dd>4,200 EGP</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store</p>
+  </footer>
+
+</body>
+</html>
