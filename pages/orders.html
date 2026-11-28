@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="shop.html">Shop &amp; Pets</a></li>
+        <li><a href="cart.html">Cart (2)</a></li>
+        <li><a href="orders.html" class="active" aria-current="page">My Orders</a></li>
+        <li><a href="admin-login.html">Admin</a></li>
+        <li><a href="auth.html" class="btn-nav">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="orders-page">
+    <div class="cart-heading">
+      <h1>My Orders</h1>
+      <a href="shop.html" class="continue-shopping">Continue shopping</a>
+    </div>
+
+    <section class="orders-card" aria-label="Order history">
+      <div class="table-scroll">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Total Amount</th>
+              <th scope="col">Order Status</th>
+            </tr>
+          </thead>
+          <tbody class="order-group">
+            <tr>
+              <th scope="row">#PS-1048</th>
+              <td><time datetime="2026-11-21">Nov 21, 2026</time></td>
+              <td class="money">4,200 EGP</td>
+              <td><span class="status-badge status-pending">Pending</span></td>
+            </tr>
+            <tr class="order-details-row">
+              <td colspan="4">
+                <details class="order-details">
+                  <summary>View receipt &amp; delivery details</summary>
+                  <div class="order-detail-content">
+                    <div>
+                      <h3>Items</h3>
+                      <ul class="receipt-list">
+                        <li><span>Puppy Growth Dry Kibble (4kg) × 1</span><span>1,150 EGP</span></li>
+                        <li><span>Multi-Level Cat Tree × 2</span><span>2,900 EGP</span></li>
+                        <li><span>Delivery Fee</span><span>150 EGP</span></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Delivery</h3>
+                      <p>Cairo, Egypt</p>
+                      <p>Payment: Cash on Delivery</p>
+                      <p>Preparing your order for dispatch.</p>
+                    </div>
+                  </div>
+                </details>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="order-group">
+            <tr>
+              <th scope="row">#PS-1032</th>
+              <td><time datetime="2026-11-16">Nov 16, 2026</time></td>
+              <td class="money">2,380 EGP</td>
+              <td><span class="status-badge status-shipped">Shipped</span></td>
+            </tr>
+            <tr class="order-details-row">
+              <td colspan="4">
+                <details class="order-details">
+                  <summary>View receipt &amp; delivery details</summary>
+                  <div class="order-detail-content">
+                    <div>
+                      <h3>Items</h3>
+                      <ul class="receipt-list">
+                        <li><span>Cotton Rope Tug Toy × 2</span><span>440 EGP</span></li>
+                        <li><span>Adjustable Padded Collar × 1</span><span>340 EGP</span></li>
+                        <li><span>Multi-Level Cat Tree × 1</span><span>1,450 EGP</span></li>
+                        <li><span>Delivery Fee</span><span>150 EGP</span></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Delivery</h3>
+                      <p>Giza, Egypt</p>
+                      <p>Payment: Card</p>
+                      <p>Your order is on its way.</p>
+                    </div>
+                  </div>
+                </details>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="order-group">
+            <tr>
+              <th scope="row">#PS-0987</th>
+              <td><time datetime="2026-11-05">Nov 5, 2026</time></td>
+              <td class="money">1,300 EGP</td>
+              <td><span class="status-badge status-delivered">Delivered</span></td>
+            </tr>
+            <tr class="order-details-row">
+              <td colspan="4">
+                <details class="order-details">
+                  <summary>View receipt &amp; delivery details</summary>
+                  <div class="order-detail-content">
+                    <div>
+                      <h3>Items</h3>
+                      <ul class="receipt-list">
+                        <li><span>Puppy Growth Dry Kibble (4kg) × 1</span><span>1,150 EGP</span></li>
+                        <li><span>Delivery Fee</span><span>150 EGP</span></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Delivery</h3>
+                      <p>Alexandria, Egypt</p>
+                      <p>Payment: Cash on Delivery</p>
+                      <p>Delivered on Nov 8, 2026.</p>
+                    </div>
+                  </div>
+                </details>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store</p>
+  </footer>
+
+</body>
+</html>

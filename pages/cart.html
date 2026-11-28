@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart — PetShop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="../index.html" class="logo">Pet<span>Shop</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="shop.html">Shop &amp; Pets</a></li>
+        <li><a href="cart.html" class="active" aria-current="page">Cart (2)</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+        <li><a href="admin-login.html">Admin</a></li>
+        <li><a href="auth.html" class="btn-nav">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <div class="cart-heading">
+      <h1>Your Shopping Cart</h1>
+      <a href="shop.html" class="continue-shopping">Continue shopping</a>
+    </div>
+
+    <div class="cart-layout">
+      <section class="cart-items" aria-labelledby="cart-items-heading">
+        <h2 id="cart-items-heading" class="visually-hidden">Items in your cart</h2>
+        <div class="table-scroll">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col"><span class="visually-hidden">Remove</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cart-product">
+                    <img src="../images/dog-food.webp" alt="Puppy Growth Dry Kibble bag">
+                    <span>Puppy Growth Dry Kibble (4kg)</span>
+                  </div>
+                </td>
+                <td class="money">1,150 EGP</td>
+                <td>
+                  <label class="visually-hidden" for="quantity-food">Quantity for Puppy Growth Dry Kibble</label>
+                  <input id="quantity-food" class="quantity-input" type="number" min="1" value="1">
+                </td>
+                <td class="money">1,150 EGP</td>
+                <td><button class="remove-button" type="button" aria-label="Remove Puppy Growth Dry Kibble from cart">&times;</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cart-product">
+                    <img src="../images/cat-tree.webp" alt="Multi-Level Cat Tree">
+                    <span>Multi-Level Cat Tree</span>
+                  </div>
+                </td>
+                <td class="money">1,450 EGP</td>
+                <td>
+                  <label class="visually-hidden" for="quantity-tree">Quantity for Multi-Level Cat Tree</label>
+                  <input id="quantity-tree" class="quantity-input" type="number" min="1" value="2">
+                </td>
+                <td class="money">2,900 EGP</td>
+                <td><button class="remove-button" type="button" aria-label="Remove Multi-Level Cat Tree from cart">&times;</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order Summary</h2>
+        <dl class="summary-lines">
+          <div>
+            <dt>Subtotal</dt>
+            <dd>4,050 EGP</dd>
+          </div>
+          <div>
+            <dt>Delivery Fee</dt>
+            <dd>150 EGP</dd>
+          </div>
+          <div class="summary-total">
+            <dt>Total Price</dt>
+            <dd>4,200 EGP</dd>
+          </div>
+        </dl>
+        <a href="checkout.html" class="btn-primary checkout-button">Proceed to Checkout</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PetShop Online Store</p>
+  </footer>
+
+</body>
+</html>
